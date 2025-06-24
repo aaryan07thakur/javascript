@@ -158,14 +158,60 @@ comments*/
 
 
 
-//Ternary operator
-let age=22;
-// age>=18? console.log("adult"): console.log("Not adult")
-let result = age>=18 ? "adult":"not adult"
-console.log(result)
+//Ternary operator:
+/**Ternary operator  is a simpler and compact of if-else 
+ if else lekhne ne arko tarika 
+ */
+// let age=22;
+// // age>=18? console.log("adult"): console.log("Not adult")
+// let result = age>=18 ? "adult":"not adult"
+// console.log(result)
 
 
 
+// // promt : user ko input lina ko lagie use hun x
+// let name=prompt("Hello");
+// console.log(name);
+
+
+
+
+
+
+// Get user to input a number using  promt("Enter a number: "). Check if the number is a multiple of 5 or 
+//not.
+
+// let num=prompt("Enter a number");
+// if (num%5===0){
+//     console.log(num,"is a multiple of 5")
+
+// } else{
+//     console.log(num,"is not a multiple of 5")
+// }
+
+
+
+
+/* write a code wchich can give grades to students according to their scores:
+80-100,A
+70-89,B
+60-69,C
+50-59,D
+0-49,F
+*/
+
+let marks=prompt("Enter your marks(0-100")
+if (marks>=90 && marks<=100){
+    console.log("your marks is:",marks,"and your Grade is A")
+}else if (marks>=70 && marks<=89){
+    console.log("your marks is:",marks,"and your Grade is B ")
+}else if (marks>=60 && marks<=69){
+    console.log("your marks is:",marks,"and your Grade is c ")
+}else if (marks>=50 && marks<=59){
+    console.log("your marks is:",marks,"and your Grade is D ")
+}else if (marks>=0 && marks<=49){
+    console.log("your marks is:",marks,"and your Grade is F ")
+}
 
 
 
