@@ -199,7 +199,7 @@ comments*/
 50-59,D
 0-49,F
 */
-
+/*
 let marks=prompt("Enter your marks(0-100")
 if (marks>=90 && marks<=100){
     console.log("your marks is:",marks,"and your Grade is A")
@@ -212,6 +212,70 @@ if (marks>=90 && marks<=100){
 }else if (marks>=0 && marks<=49){
     console.log("your marks is:",marks,"and your Grade is F ")
 }
+
+*/
+
+
+/*
+Write a function that compares two numbers and logs:
+"Number A is greater"
+"Number B is greater"
+"Both are equal"
+Use if...else if...else.
+*/
+
+// let A=prompt("Enter your number for A");
+// let B= prompt("Enter your number for B");
+// if (A>B){
+//     console.log("A is greater")
+// } else if (B>A){
+//     console.log("B is greater")
+// }else {
+//     console.log("Both are Equal")
+// }
+
+
+
+
+
+/**   Write a program that checks:
+
+If a number is divisible by both 3 and 5 → print "FizzBuzz"
+
+If only by 3 → print "Fizz"
+
+If only by 5 → print "Buzz"
+
+Else → print the number */
+
+// let num=prompt("Enter your number")
+// if (num%3==0 && num%5===0){
+//     console.log("this is a FizzBuzz")
+// } else if (num%3==0){
+//     console.log("This is Fizz")
+// } else if (num%5==0){
+//     console.log("This is Buzz")
+// }else{
+//     console.log("Number is :",num)
+// }
+
+
+let user=prompt("ENter a single Character:");
+//user.length==1 ensures only one character is entered 
+// /^[a-zA-Z]$/: Regex to check if it’s a letter.
+if(user.length===1 && /^[a-zA-Z]$/.test(user)){
+    let char=user.toLowerCase();
+    if (["a","i","e","o","u"].includes(char)){
+        console.log(user,"is a Vowel Letter");
+    }else{
+        console.log(user," is a consonant letter");
+    }
+} else{
+    console.log(user,"is not an alphabet");
+}
+
+
+
 
 
 
