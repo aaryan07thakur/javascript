@@ -260,19 +260,19 @@ Else → print the number */
 // }
 
 
-let user=prompt("ENter a single Character:");
-//user.length==1 ensures only one character is entered 
-// /^[a-zA-Z]$/: Regex to check if it’s a letter.
-if(user.length===1 && /^[a-zA-Z]$/.test(user)){
-    let char=user.toLowerCase();
-    if (["a","i","e","o","u"].includes(char)){
-        console.log(user,"is a Vowel Letter");
-    }else{
-        console.log(user," is a consonant letter");
-    }
-} else{
-    console.log(user,"is not an alphabet");
-}
+// let user=prompt("ENter a single Character:");
+// //user.length==1 ensures only one character is entered 
+// // /^[a-zA-Z]$/: Regex to check if it’s a letter.
+// if(user.length===1 && /^[a-zA-Z]$/.test(user)){
+//     let char=user.toLowerCase();
+//     if (["a","i","e","o","u"].includes(char)){
+//         console.log(user,"is a Vowel Letter");
+//     }else{
+//         console.log(user," is a consonant letter");
+//     }
+// } else{
+//     console.log(user,"is not an alphabet");
+// }
 
 
 
