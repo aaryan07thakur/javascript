@@ -46,11 +46,68 @@
 
 
 //example number2
-let i=1;
-do{
-    console.log("i=",i);
-    i++
-}while (i<=19)
+// let i=1;
+// do{
+//     console.log("i=",i);
+//     i++
+// }while (i<=19)
+
+
+
+
+// for-of loop
+// let str="Thankyou God";
+// for (let i of str){
+//     console.log("i=",i);
+// }
+
+
+
+
+//example of 2
+// let str="Thankyou God";
+// let length=0
+// for (let i of str){
+//     console.log("i=",i);
+//     length++;
+// }
+// console.log("string length is =",length)
+
+
+
+
+
+// for in loops
+// let stuudent={
+//     name:"Dipesh",
+//     class:12,
+//     Roll:10,
+//     CDPA:3.3,
+//     ispass:true,
+// };
+// for (let i in stuudent){
+//     console.log(i);
+// }
+
+
+
+
+
+let stuudent={
+    name: "Dipesh Thakur",
+    age:28,
+    cgpa:3.8,
+    ispass:true
+};
+    for (let key in stuudent){
+            console.log("Key=",key, "value=",stuudent[key]);
+    
+    }
+    
+
+
+
+
 
 
 
