@@ -93,19 +93,29 @@
 
 
 
-let stuudent={
-    name: "Dipesh Thakur",
-    age:28,
-    cgpa:3.8,
-    ispass:true
-};
-    for (let key in stuudent){
-            console.log("Key=",key, "value=",stuudent[key]);
+// let stuudent={
+//     name: "Dipesh Thakur",
+//     age:28,
+//     cgpa:3.8,
+//     ispass:true
+// };
+//     for (let key in stuudent){
+//             console.log("Key=",key, "value=",stuudent[key]);
     
-    }
+//     }
     
 
 
+
+// create a game number where you start with any random game number.Ask the user to keep guessign the 
+//game number untl the user enters correct value
+
+// let gamenum=33;
+// let usernum=prompt("Enter the number");
+// while (usernum!=gamenum){
+//     usernum=prompt("you guess the wrong number,Guess again")
+// }
+// console.log("congratulation you guess the correct number, You win the Game!")
 
 
 
