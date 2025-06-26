@@ -55,6 +55,17 @@
 
 
 
+// practice questions:
+// Prompt the user to enter their full name.Generate a username for them based on the input.
+// Start username with @, followed by their full name and ending with the fullname length.
+// eg. username="dipeshthakur",
+// username should be "@dipeshthakur12"
+
+
+let user=prompt("Enter your FullName");
+let user1="@"+user+user.length
+console.log(user1)
+
 
 
 
