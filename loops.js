@@ -224,15 +224,15 @@ console.log("total sum of number from 1 to 100 is :",sum);
 
 
 // skip multiples of 3 using continue and store other in a new array?
-let result=[];
-for (let i=1; i<=50; i++){
-    if (i%3===0){
-        continue;
-    }
-    result.push(i);
-}
-console.log("number from 1 to 50 excluding multiples of 3: ");
-console.log(result)
+// let result=[];
+// for (let i=1; i<=50; i++){
+//     if (i%3===0){
+//         continue;
+//     }
+//     result.push(i);
+// }
+// console.log("number from 1 to 50 excluding multiples of 3: ");
+// console.log(result)
 
 
 

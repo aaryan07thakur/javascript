@@ -5,8 +5,8 @@
 // Fullname="Dipesh Thakaur"
 // console.log(Fullname)
 
-// // age=40;
-// // console.log(age)
+// age=40;
+// console.log(age)
 // Price=123.44
 // x=null
 // y=undefined
@@ -17,16 +17,16 @@
 
 
 // let age=20;
-// age=21
-// console.log(age)
-// let age=42;   // error aau x kina ki same block ma redeclear garna mildai n
+// age=21   // re-declear age=21
+// console.log(age)  // output 21 hun x kina ki re-asign garna mil x 
+// let age=42;   // error aau x kina ki same block ma re-declear garna mildai n
 
 
 
 
 
 // const n=100;
-// // n=50   // output =error
+// n=50   // output =error because const laie change garna mila dai n or re-asign garna mildai n 
 // console.log(n)
 
 
@@ -140,10 +140,10 @@
 
 
 
-const name = "Dipesh Thakur";
-const age = 21;
-const isStudent = true;
-console.log("My name is " + name + ", I am " + age + " years old, and I am a student: " + isStudent);
+// const name = "Dipesh Thakur";
+// const age = 21;
+// const isStudent = true;
+// console.log("My name is " + name + ", I am " + age + " years old, and I am a student: " + isStudent);
 
 
 

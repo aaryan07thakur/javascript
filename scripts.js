@@ -162,7 +162,7 @@ comments*/
 /**Ternary operator  is a simpler and compact of if-else 
  if else lekhne ne arko tarika 
  */
-// let age=22;
+// let age=2;
 // // age>=18? console.log("adult"): console.log("Not adult")
 // let result = age>=18 ? "adult":"not adult"
 // console.log(result)
@@ -241,11 +241,8 @@ Use if...else if...else.
 /**   Write a program that checks:
 
 If a number is divisible by both 3 and 5 → print "FizzBuzz"
-
 If only by 3 → print "Fizz"
-
 If only by 5 → print "Buzz"
-
 Else → print the number */
 
 // let num=prompt("Enter your number")
