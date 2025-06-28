@@ -248,7 +248,41 @@ check_consunant("A quick Brown Fox jumps over the crezy dog")
 // console.log(output);
 
 
+// we are given array of marks of students.Filter out of the marks of students that scored 90+.
+// let marks=[77,55,88,99,91,98,76,90]
 
+// let final=marks.filter((val)=>{
+//     return val>=90;
+
+// });
+// console.log("The marks of student that scores 90+ are =", final );
+
+
+
+// Take a number n as input from user. create and array of number from 1 to n.
+// user the reduce method to calculate sum of all numers in the Array.
+// use the reduce method to calculate product of all numbers in the array.
+
+
+let num=prompt("Enter the number: ")
+let arr=[];
+for (let i=1; i<=num; i++){
+    arr[i-1]=i;
+
+}
+    console.log(arr)
+    let sum=arr.reduce((prev,curr)=>{
+        return prev +curr;
+
+    })
+    console.log("The total sum of array is =",sum);
+
+
+    let factorial=arr.reduce((prev,curr)=>{
+        return prev *curr;
+
+    })
+    console.log("The total factorial of array is =",factorial);
 
 
 
