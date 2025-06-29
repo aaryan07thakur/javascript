@@ -157,6 +157,24 @@ check_consunant("A quick Brown Fox jumps over the crezy dog")
 
 */
 
+//using arrow function:
+/*
+let vowels="aeiou";
+let count=0;
+let check_consunant=(str)=>{
+    for(let ch of str.toLowerCase()){
+        if (vowels.indexOf(ch) === -1 && /[a-z]/.test(ch)){
+            count++;
+        }
+
+    }
+    console.log("total number of consunant are= ",count);
+
+    // return count;
+
+ }
+check_consunant("A quick Brown Fox jumps over the crezy dog")
+*/
 
 
 
@@ -264,25 +282,25 @@ check_consunant("A quick Brown Fox jumps over the crezy dog")
 // use the reduce method to calculate product of all numbers in the array.
 
 
-let num=prompt("Enter the number: ")
-let arr=[];
-for (let i=1; i<=num; i++){
-    arr[i-1]=i;
+// let num=prompt("Enter the number: ")
+// let arr=[];
+// for (let i=1; i<=num; i++){
+//     arr[i-1]=i;
 
-}
-    console.log(arr)
-    let sum=arr.reduce((prev,curr)=>{
-        return prev +curr;
+// }
+//     console.log(arr)
+//     let sum=arr.reduce((prev,curr)=>{
+//         return prev +curr;
 
-    })
-    console.log("The total sum of array is =",sum);
+//     })
+//     console.log("The total sum of array is =",sum);
 
 
-    let factorial=arr.reduce((prev,curr)=>{
-        return prev *curr;
+//     let factorial=arr.reduce((prev,curr)=>{
+//         return prev *curr;
 
-    })
-    console.log("The total factorial of array is =",factorial);
+//     })
+//     console.log("The total factorial of array is =",factorial);
 
 
 
