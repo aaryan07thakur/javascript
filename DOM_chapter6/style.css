@@ -24,6 +24,16 @@ button{
 
 
 
+.box{
+    height: 100px;
+    width: 100px;
+    border:1px solid rgb(118, 221, 59);
+    margin:5px;
+    text-align:center;
+    background-color:rgb(228, 209, 38)
+}
+
+
 
 
 
