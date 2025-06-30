@@ -5,8 +5,8 @@ body{
     background-color: blanchedalmond;
 }
 button{
-    background-color: blue;
-    color: white;
+    background-color: rgb(221, 221, 243);
+    color: rgb(24, 22, 22);
 }
 
 
@@ -23,7 +23,7 @@ button{
 }
 
 
-
+/* class laie style garnu paryo vnae . and classname use hun x */
 .box{
     height: 100px;
     width: 100px;
@@ -34,6 +34,13 @@ button{
 }
 
 
+
+#abc{
+    height: 150px;
+    width: 100px;
+    color: rgb(8, 15, 15);
+    background-color: rgb(226, 255, 147);
+}
 
 
 

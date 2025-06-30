@@ -125,9 +125,21 @@ console.log("Thank You god");
 // console.log(par.getAttribute("class")); // p tag ko attibutes access gare ko 
 
 
-let para=document.querySelector("p");
-para.setAttribute("name", "Dipesh"); // change the attributes name
-console.log(para.getAttribute("name")); 
+// let para=document.querySelector("p");
+// para.setAttribute("name", "Dipesh"); // change the attributes name
+// console.log(para.getAttribute("name")); 
+
+
+
+//style
+// let divs=document.querySelector("div");
+// console.log(divs.style);  //div ko style laie access garna mil x
+// console.log(divs.style.color="white") // style ko colour or any things can be changed
+// console.log(divs.style.background="green")
+// console.log(divs.style.fontSize="20px")
+// console.log(divs.innerText="Thank you God!")// text change garna mil x 
+// console.log(divs.style.textAlign="Center");
+// divs.style.visibility="hidden";  // visibility pani hide garna milx
 
 
 
@@ -135,8 +147,37 @@ console.log(para.getAttribute("name"));
 
 
 
+//insert elements
+let btn =document.createElement("button");
+btn.innerText="clickMe !";
+console.log(btn);
+
+// let div=document.querySelector("div");
+// div.append(btn);
+// div.prepend(btn);
+// div.after(btn);
+// div.before(btn);
+
+// let p=document.querySelector("p");  // paragraph ko tala add garnu x vnae 
+// p.after(btn);
+// p.before(btn);
 
 
+
+let newheading=document.createElement("h1");
+// h1.innerText("Thank You God !");
+newheading.innerHTML="<i>Thank YOu God !</i>"
+
+
+let h1=document.querySelector("body") //.prepend(newheading) bata pani add garna sakin x
+h1.prepend(newheading);
+
+
+
+//delete 
+
+let para=document.querySelector("p"); 
+para.remove();
 
 
 
