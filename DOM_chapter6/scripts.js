@@ -94,24 +94,40 @@ console.log("Thank You god");
 
 
 //using loops
-let divs=document.querySelectorAll(".box");
-let idx=1;
-for (div of divs){
-    // console.log(div.innerText);
-    div.innerText=`new unique value ${idx}`;
-    idx++;
-}
-console.log(div)
+// let divs=document.querySelectorAll(".box");
+// let idx=1;
+// for (div of divs){
+//     // console.log(div.innerText);
+//     div.innerText=`new unique value ${idx}`;
+//     idx++;
+// }
+// console.log(div)
+
+
+
+// ==========================================================
+// for attributes
+
+// let div=document.querySelector("div");
+// console.dir(div);
+
+// let id=div.getAttribute("id"); // div ko attribute access garna ko lagie
+// console.log(id);
+
+// let nam=div.getAttribute("name");
+// console.log(nam);  // div ko name attriute laei access gar x 
 
 
 
 
+// ==============================================
+// let par=document.querySelector("p");
+// console.log(par.getAttribute("class")); // p tag ko attibutes access gare ko 
 
 
-
-
-
-
+let para=document.querySelector("p");
+para.setAttribute("name", "Dipesh"); // change the attributes name
+console.log(para.getAttribute("name")); 
 
 
 
