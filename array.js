@@ -145,6 +145,29 @@ c) add amazon at the end
 
 
 
+// longest harmonious subsequence
+var findLHS = function(nums) {
+    const map={};
+    let maxlen=0;
+    for (const num of nums){
+        map[num]=(map[num]|| 0) + 1;
+    }
+    for (const key in map){
+        const nextkey= parseInt(key)+1;
+        if(map[nextkey]){
+            const total=map[key] + map[nextkey];
+            maxlen=Math.max(maxlen, total);
+        }
+    }
+    return maxlen;
+};
+console.log(findLHS([1,3,2,2,5,2,3,7]));
+
+
+
+
+
+
 
 
 

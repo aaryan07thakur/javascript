@@ -237,4 +237,7 @@ console.log("total sum of number from 1 to 100 is :",sum);
 
 
 
+
+
+
  
