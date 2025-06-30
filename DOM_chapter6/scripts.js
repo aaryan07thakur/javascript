@@ -148,9 +148,9 @@ console.log("Thank You god");
 
 
 //insert elements
-let btn =document.createElement("button");
-btn.innerText="clickMe !";
-console.log(btn);
+// let btn =document.createElement("button");
+// btn.innerText="clickMe !";
+// console.log(btn);
 
 // let div=document.querySelector("div");
 // div.append(btn);
@@ -164,20 +164,61 @@ console.log(btn);
 
 
 
-let newheading=document.createElement("h1");
-// h1.innerText("Thank You God !");
-newheading.innerHTML="<i>Thank YOu God !</i>"
+// let newheading=document.createElement("h1");
+// // h1.innerText("Thank You God !");
+// newheading.innerHTML="<i>Thank YOu God !</i>"
 
 
-let h1=document.querySelector("body") //.prepend(newheading) bata pani add garna sakin x
-h1.prepend(newheading);
+// let h1=document.querySelector("body") //.prepend(newheading) bata pani add garna sakin x
+// h1.prepend(newheading);
 
 
 
 //delete 
 
-let para=document.querySelector("p"); 
-para.remove();
+// let para=document.querySelector("p"); 
+// para.remove();
+
+
+
+
+
+// Create a new button element. Give it a text "Clickme", background color of red
+// and text color of white.
+// Insert the button as the first element inside the body tag
+
+let newbtn=document.createElement("button");
+newbtn.innerText="Cliek Me!"
+// console.log(btn)
+newbtn.style.color="white";
+newbtn.style.backgroundColor="red";
+document.querySelector("body").prepend(newbtn);
+
+
+
+/* create a <p> tag in html, give it a class& some styling, Now create a new class in css
+ and try to append this class to the <p> element. 
+ Did you notice,how yo overwrite the class name when you add a new one? solve this problem 
+ using classlist */
+
+
+let para=document.querySelector("p") //.classList
+let abc=para.classList.add("newclass");// new class add garna ko lagei 
+console.log(abc)
+console.log(para);
+
+let rem=para.classList.remove("newclass");// remove garna ko lagie
+console.log(rem);
+
+// let val=para.getAttribute("class")  // class ko value print gar x 
+// console.log(val);
+// let content=para.setAttribute("class","newclass");// class ko value change hun x but text black hun x so 
+// console.log(content); 
+
+
+
+
+
 
 
 
