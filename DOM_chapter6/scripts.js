@@ -1,4 +1,4 @@
-console.log("Thank You god");
+// console.log("Thank You god");
 // alert(
 //     message=" Thank you god"
 // )
@@ -69,7 +69,7 @@ console.log("Thank You god");
 // console.log(div.innerText)  // innerText vane ko div vitra ko sabai element
 
 
-
+//question solution
 
 // let h2=document.querySelector("h2");
 // console.log(h2.innerText);
