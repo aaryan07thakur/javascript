@@ -187,12 +187,12 @@
 // and text color of white.
 // Insert the button as the first element inside the body tag
 
-let newbtn=document.createElement("button");
-newbtn.innerText="Cliek Me!"
-// console.log(btn)
-newbtn.style.color="white";
-newbtn.style.backgroundColor="red";
-document.querySelector("body").prepend(newbtn);
+// let newbtn=document.createElement("button");
+// newbtn.innerText="Cliek Me!"
+// // console.log(btn)
+// newbtn.style.color="white";
+// newbtn.style.backgroundColor="red";
+// document.querySelector("body").prepend(newbtn);
 
 
 
