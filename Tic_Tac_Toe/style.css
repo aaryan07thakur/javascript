@@ -1,0 +1,36 @@
+/* purai page ma apply hun x (*) use gare ma */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#89E4E9;
+    text-align: center;
+}
+
+/* class laie style garda .class name use garnu par x */
+.container{
+    height: 70vh;  /* viewport height means page visible ko 70% part container sanga hun x  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.game{
+    height: 60vmin;  /*vmin is viewport minimum: vh ko 60% game class sang hun x  */
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+}
+
