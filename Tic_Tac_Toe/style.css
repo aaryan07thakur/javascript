@@ -7,6 +7,7 @@
 body{
     background-color:#89E4E9;
     text-align: center;
+
 }
 
 /* class laie style garda .class name use garnu par x */
@@ -32,5 +33,22 @@ body{
 .box{
     height: 18vmin;
     width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgb(0, 0,0.1);
+    font-size: 8vmin;
+    color: blueviolet;
+}
+
+
+#reset-btn{
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: rgb(76, 68, 68) ;
+    color: rgb(240, 165, 165);
+    border: none;
+
+
 }
 
