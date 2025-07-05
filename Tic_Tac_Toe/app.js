@@ -38,6 +38,22 @@ boxes.forEach((box)=> {
 
 });
 
+const disabledBoxes=()=>{
+    for( let box of boxes){
+        box.disabled=true;
+    }
+
+}
+
+
+
+const enableBoxes=()=>{
+    for( let box of boxes){
+        box.disabled=true;
+    }
+
+}
+
 const checkwinner=()=>{
     for (let pattern of winning_pattern){
         // console.log(pattern[0],pattern[1],pattern[2])
@@ -53,7 +69,11 @@ const checkwinner=()=>{
         if (posi1val!="" && posi2val!="" && posi3val!=""){
             if (posi1val=== posi2val && posi2val===posi3val){
                 alert(`winner is=${posi1val}`)
+                disabledBoxes();
+
+    
             }
+
         }
     }
 
@@ -61,12 +81,10 @@ const checkwinner=()=>{
 
 
 
-
-
-resetbtn.addEventListener("click",()=>{
-    console.log("Reset game button is clicked");
-
-});
+const resetGame=()=>{
+    turnO=true;
+    enableBoxes();  
+}
 
 
 
