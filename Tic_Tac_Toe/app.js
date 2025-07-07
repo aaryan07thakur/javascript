@@ -54,12 +54,6 @@ const enableBoxes=()=>{
 
 };
 
-
-const isboxfull=()=>{
-    boxes.every(box=>box.innerText!=="")
-}
-
-
 // winner checking logic:
 const checkwinner=()=>{
     for (let pattern of winning_pattern){
