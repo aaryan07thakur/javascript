@@ -71,8 +71,9 @@ const checkwinner=()=>{
         
         if (posi1val!="" && posi2val!="" && posi3val!=""){
             if (posi1val=== posi2val && posi2val===posi3val){
-                alert(`winner is=${posi1val}`)
-                disabledBoxes(); //winner vaie sake pachhi feri double 
+                alert(`winner is=${posi1val}`);
+                resetGame();
+                // disabledBoxes(); //winner vaie sake pachhi feri double 
                                   // click garna n pauna ko lagie disable gage ko box laie
 
     
@@ -87,7 +88,7 @@ function resetGame(){
     turnO=true;
     enableBoxes();
      }
-     resetbtn.addEventListener("click",()=>{
+    resetbtn.addEventListener("click",()=>{
     resetGame();
     console.log("Every this is reset succesfully ")
 });
