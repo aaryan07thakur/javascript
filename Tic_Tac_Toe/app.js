@@ -30,8 +30,7 @@ boxes.forEach((box)=> {
             turnO=true;
         }
         //box disabled vaya n vane double click garda value change hun x so 
-        box.disabled=true;
-
+        box.disabled=true;// box laie disable gare ko 
         checkwinner();
 
     });
@@ -46,14 +45,17 @@ const disabledBoxes=()=>{
 }
 
 
-
 const enableBoxes=()=>{
     for( let box of boxes){
-        box.disabled=true;
+        box.disabled=false;
+        box.innerText="";
+
     }
 
-}
+};
 
+
+// winner checking logic:
 const checkwinner=()=>{
     for (let pattern of winning_pattern){
         // console.log(pattern[0],pattern[1],pattern[2])
@@ -62,6 +64,7 @@ const checkwinner=()=>{
         //     boxes[pattern[1]].innerText,
         //     boxes[pattern[2]].innerText
         //  );
+        // box ko position ma k valeu x tyo print gar x :
         let posi1val=boxes[pattern[0]].innerText;
         let posi2val=boxes[pattern[1]].innerText;
         let posi3val=boxes[pattern[2]].innerText; 
@@ -76,22 +79,18 @@ const checkwinner=()=>{
             }
 
         }
-    }
 
-};
-
-
+    }};
 
 function resetGame(){
     boxes.forEach(box=>(box.innerText=""));
     turnO=true;
     enableBoxes();
-     
-}
-
-resetbtn.addEventListener("click", resetGame)=()=>{
-    console.log("every this is reset succesfully ")
-}
+     }
+     resetbtn.addEventListener("click",()=>{
+    resetGame();
+    console.log("Every this is reset succesfully ")
+});
 
 
 
