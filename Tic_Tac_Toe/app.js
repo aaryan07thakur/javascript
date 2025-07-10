@@ -59,7 +59,7 @@ const enableBoxes=()=>{
     for( let box of boxes){
         box.disabled=false;
         box.innerText="";
-        box.classList.remove("player-0","player-x");
+        box.classList.remove("player-O","player-X");
 
     }
 
