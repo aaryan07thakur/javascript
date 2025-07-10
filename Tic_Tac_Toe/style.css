@@ -50,7 +50,15 @@ body{
     color: rgb(240, 165, 165);
     border: none;
 
+}
 
+
+.player-O{
+    color: blue;
+}
+
+.player-X{
+    color: rgb(144, 226, 67);
 }
 
 

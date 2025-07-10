@@ -2,6 +2,7 @@ let boxes=document.querySelectorAll(".box");
 let resetbtn=document.querySelector("#reset-btn");
 
 let turnO=true;//playerX, PlayerO
+let count=0;
 
 
 const winning_pattern=[
@@ -24,14 +25,23 @@ boxes.forEach((box)=> {
         // false x vane "X" print hun x and turno=true hun x
         if(turnO){
             box.innerText="O";
+            // box ma va ko inner text laie classlist bata player-o vanne class ma add gareko  
+            box.classList.add("player-O");
             turnO=false;
         }else{
             box.innerText="X";
+            // box ma va ko inner text laie classlist bata player-X vanne class ma add gareko  
+            box.classList.add("player-X");
             turnO=true;
         }
         //box disabled vaya n vane double click garda value change hun x so 
-        box.disabled=true;// box laie disable gare ko 
-        checkwinner();
+        box.disabled=true;// box laie disable gare ko
+        count++; 
+
+        let iswinner=checkwinner();
+        if(!iswinner && count===9){
+            showDraw();
+        }
 
     });
 
@@ -42,13 +52,14 @@ const disabledBoxes=()=>{
         box.disabled=true;
     }
 
-}
+};
 
 
 const enableBoxes=()=>{
     for( let box of boxes){
         box.disabled=false;
         box.innerText="";
+        box.classList.remove("player-0","player-x");
 
     }
 
@@ -70,21 +81,37 @@ const checkwinner=()=>{
         
         if (posi1val!="" && posi2val!="" && posi3val!=""){
             if (posi1val=== posi2val && posi2val===posi3val){
-                alert(`winner is=${posi1val}`);
+                showAlert(`winner is=${posi1val}`);
                 resetGame();
+                enableBoxes();
+                
                 // disabledBoxes(); //winner vaie sake pachhi feri double 
                                   // click garna n pauna ko lagie disable gage ko box laie
-
+                return true;
     
             }
 
         }
 
-    }};
+    }
+    return false; // no winner found yet
+};
+
+const showAlert=(msg)=>{
+    alert(msg); 
+};
+
+
+const showDraw =()=>{
+    showAlert("It's a Draw!");
+    disabledBoxes(); // disable all boxes on a draw
+    resetGame();
+};
 
 function resetGame(){
     boxes.forEach(box=>(box.innerText=""));
     turnO=true;
+    count=0;
     enableBoxes();
      }
     resetbtn.addEventListener("click",()=>{
