@@ -3,7 +3,8 @@ let compScore=0;
 
 const choises=document.querySelectorAll(".choice");
 const msg=document.querySelector("#msg");
-// const scores=document.querySelector()
+const userscorespara=document.querySelector("#user-score");
+const compsocrepara=document.querySelector("#comp-score")
 
 
 
@@ -16,31 +17,32 @@ const genComChoise=()=>{
 
 
 const drawGame=()=>{
-    console.log("Game was Draw");
     msg.innerText="Game is Draw, Play again";
     msg.style.backgroundColor="black"
     
 };
 
 
-const showWinner=(userwin)=>{
+const showWinner=(userwin,userchoice,CompChoise)=>{
     if(userwin){
-        console.log("You win!")
-        msg.innerText="You Win!";
+        userScore++;
+        userscorespara.innerText=userScore;
+        msg.innerText=`You Win! your ${userchoice} beats my ${CompChoise} `;
         msg.style.backgroundColor="Green";
     }else{
-        console.log("you lose")
-        msg.innerText="You Lose.";
+        compScore++;
+        compsocrepara.innerText=compScore;
+        msg.innerText=`You Lose.my ${CompChoise} beats  your ${userchoice}`;
         msg.style.backgroundColor="red"
     }
 }
 
 
 const playGame=(userchoice)=> {
-    console.log("user choice =",userchoice)
+    // console.log("user choice =",userchoice)
     //generate computer choise
     const CompChoise=genComChoise();
-    console.log("comp choice=", CompChoise);
+    // console.log("comp choice=", CompChoise);
 
     if (userchoice=== CompChoise){
         //draw game
@@ -60,7 +62,7 @@ const playGame=(userchoice)=> {
             //computer ko choise rock ya paper hun x so
             userwin=CompChoise==="rock"? false: true;
         } 
-        showWinner(userwin);
+        showWinner(userwin,CompChoise,userchoice);
     }
 };
 
