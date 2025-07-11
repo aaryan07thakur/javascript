@@ -2,6 +2,8 @@ let userScore=0;
 let compScore=0;
 
 const choises=document.querySelectorAll(".choice");
+const msg=document.querySelector("#msg");
+// const scores=document.querySelector()
 
 
 
@@ -13,19 +15,25 @@ const genComChoise=()=>{
 };
 
 
+const drawGame=()=>{
+    console.log("Game was Draw");
+    msg.innerText="Game is Draw, Play again";
+    msg.style.backgroundColor="black"
+    
+};
+
+
 const showWinner=(userwin)=>{
     if(userwin){
         console.log("You win!")
+        msg.innerText="You Win!";
+        msg.style.backgroundColor="Green";
     }else{
         console.log("you lose")
+        msg.innerText="You Lose.";
+        msg.style.backgroundColor="red"
     }
 }
-
-const drawGame=()=>{
-    console.log("Game was Draw");
-}
-
-
 
 
 const playGame=(userchoice)=> {
@@ -45,14 +53,14 @@ const playGame=(userchoice)=> {
         // yadi computer ko choise paper x vnae comp lose gar  x and yadi sissiors  x vane win gar x
         userwin= CompChoise==="paper" ? false:true;
         } else if(userchoice=== "paper"){
-            //computer ko choise rock ya sessiors huna sak x 
-            userwin=CompChoise==="rock"? false:true; // ternary statement
+            //computer ko choise "rock" ya "sessiors" huna sak x 
+            userwin=CompChoise==="scissors"? false:true; // ternary statement
         }else{
             //last options user sanga sessiors x so 
             //computer ko choise rock ya paper hun x so
             userwin=CompChoise==="rock"? false: true;
-        }  
-
+        } 
+        showWinner(userwin);
     }
 };
 
