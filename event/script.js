@@ -88,7 +88,7 @@
 // create a toggle button that chandges the screen to dark-mode when clicked 
 // and light-mode when clicked again
 
-/*
+
 let modbtn=document.querySelector("#class");
 let currmode="light";
 modbtn.addEventListener("click",()=>{
@@ -103,12 +103,12 @@ modbtn.addEventListener("click",()=>{
     console.log("your current mode is =",currmode);
 
 });
-*/
 
 
 
-//next method
 
+//next method of above questions
+// question answer
 // let modbtn=document.querySelector("#class");
 // let currmode="light";
 // let body=document.querySelector("body");
@@ -130,7 +130,7 @@ modbtn.addEventListener("click",()=>{
 
 
 
-
+//<!-- hover solution -->
 // let divs=document.querySelector("div");{
 //     divs.onmouseover=()=>{  //onmouseover vane ko mouse ko cursor jati xoti lagyo div vitra 
 //                               //teti nai xoti trak gar x 
@@ -142,22 +142,22 @@ modbtn.addEventListener("click",()=>{
 
 //mouseover
 
-let divabc=document.querySelector(".dark");
-let currmode="light";
-let body=document.querySelector("body");
-divabc.addEventListener("mouseover",()=>{
-    // console.log("you are trying to change the mode");
-    if (currmode==="light"){
-        currmode="dark";
-        body.classList.add("dark")
-        body.classList.remove("light")
-    } else{
-        currmode="light";
-        body.classList.add("light");
-        body.classList.remove("dark");
-    }
-    console.log("your current mode is =",currmode);
-});
+// let divabc=document.querySelector(".dark");
+// let currmode="light";
+// let body=document.querySelector("body");
+// divabc.addEventListener("mouseover",()=>{
+//     console.log("you are trying to change the mode");
+//     if (currmode==="light"){
+//         currmode="dark";
+//         body.classList.add("dark")
+//         body.classList.remove("light")
+//     } else{
+//         currmode="light";
+//         body.classList.add("light");
+//         body.classList.remove("dark");
+//     }
+//     console.log("your current mode is =",currmode);
+// });
 
 
 
