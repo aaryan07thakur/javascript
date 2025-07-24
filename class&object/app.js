@@ -76,31 +76,43 @@ abc.__proto__=employee;
 
 // ==================================================================
 // constructor
-class car{
-    constructor(brand,milage){// this is a constructor
-        console.log("creating a new object");
-        this.brand=brand;
-        this.milage=milage;
+// class car{
+//     constructor(brand,milage){// this is a constructor
+//         console.log("creating a new object");
+//         this.brand=brand;
+//         this.milage=milage;
 
-    }
-    start(){
-        console.log("start")
-    }
-    stop(){
-        console.log("stop")
+//     }
+//     start(){
+//         console.log("start")
+//     }
+//     stop(){
+//         console.log("stop")
+//     }
+// }
+
+// let fortuner= new car("fortuner", 10); // yesma pani  first ma constructor call hun x and tes pachhi aru print hun x
+// console.log(typeof fortuner);
+// console.log(fortuner);
+
+// let lexus=new car("lexus", 13);// first ma constructor call hun x
+// console.log(lexus);
+
+
+// ==========================================================================================
+// Inheritance in js
+
+
+
+
+class parents{
+    hello(){
+        console.log("hello")
     }
 }
 
-let fortuner= new car("fortuner", 10); // yesma pani  first ma constructor call hun x and tes pachhi aru print hun x
-console.log(typeof fortuner);
-console.log(fortuner);
-
-let lexus=new car("lexus", 13);// first ma constructor call hun x
-console.log(lexus);
-
-
-
-
-
+class child extends parents{}
+let object=new child();
+console.log(object.hello);
 
 
