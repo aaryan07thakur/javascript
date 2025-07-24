@@ -239,50 +239,111 @@
 // console.log(admin.editData)// admin le data laie edit garna pau x 
 
 // ================================================================
-class Shape{
-    name;
-    sides;
-    sideLength;
+// class Shape{
+//     name;
+//     sides;
+//     sideLength;
 
-    constructor(name,sideLength,sides){
-        this.name=name;
-        this.sides=sides;
-        this.sideLength=sideLength;
-    }
+//     constructor(name,sideLength,sides){
+//         this.name=name;
+//         this.sides=sides;
+//         this.sideLength=sideLength;
+//     }
 
-    calcperimeter(){
-        console.log(
-            `The ${this.name}'s perimeter length is ${this.sides*this.sideLength}.`,
-        );
-    }
+//     calcperimeter(){
+//         console.log(
+//             `The ${this.name}'s perimeter length is ${this.sides*this.sideLength}.`,
+//         );
+//     }
     
-}
+// }
 
 
-const square=new Shape("square",4,5);
-square.calcperimeter();
+// const square=new Shape("square",4,5);
+// square.calcperimeter();
 
-const triangle=new Shape("triangle",3,3);
-triangle.calcperimeter();
+// const triangle=new Shape("triangle",3,3);
+// triangle.calcperimeter();
 
 
 
 // ==========================================================================================
 
-class square1 extends Shape{
-    constructor(sideLength){
-    super("square",4,sideLength)
-    }
-    calcarea(){
-        console.log(
-            `The ${this.name}'s area is ${this.sideLength* this.sideLength}.`,
-        );
-    }
+// class square1 extends Shape{
+//     constructor(sideLength){
+//     super("square",4,sideLength)
+//     }
+//     calcarea(){
+//         console.log(
+//             `The ${this.name}'s area is ${this.sideLength* this.sideLength}.`,
+//         );
+//     }
 
+// }
+// const area= new square1(4);
+// area.calcperimeter();
+// area.calcarea();
+
+// ===============================================================================
+// Write a JavaScript program to create a class called "Person" with properties for name,
+//  age and country. Include a method to display the person's details. Create two instances 
+//  of the 'Person' class and display their details.
+
+// class person{
+//     constructor(name,age, country){
+//         this.name=name;
+//         this.age=age;
+//         this.country=country;
+//     }
+
+//     displayDetail(){
+//         console.log(`Name:${this.name}`);
+//         console.log(`Age: ${this.age}`);
+//         console.log(`Country: ${this.country}`);
+
+//     }
+// }
+
+
+// //creating instance of the person class
+// const person1=new person('Dipesh',27,"Nepal");
+// console.log("Person1 Details:");
+// person1.displayDetail();
+
+// const person2=new person("Mukesh",25,"Nepal");
+// console.log("person2 Details: ");
+// person2.displayDetail();  //// display details of person
+
+
+// ===========================================================================================
+// Write a JavaScript program to create a class called 'Rectangle' with properties for
+//  width and height. Include two methods to calculate rectangle area and perimeter.
+//   Create an instance of the 'Rectangle' class and calculate its area and perimeter.
+
+
+
+class Rectangle{
+    constructor(width,height){
+        this.width=width;
+        this.height=height;
+    }
+    calcArea(){
+        console.log(
+            `The Area of Rectangle is: ${this.width*this.height}`
+        )
+    }
+    calcperimeter(){
+        console.log(
+            `The Perimeter of Rectangle is: ${2*(this.width*this.height)}`
+        )
+    }
 }
-const area= new square1(4);
-area.calcperimeter();
-area.calcarea();
+// create an instance of the rectangle class
+const rectangle=new Rectangle(2,4);
+
+//calculate area and perimeter of rectangle
+const area=rectangle.calcArea();
+const perimeter=rectangle.calcperimeter();
 
 
 
