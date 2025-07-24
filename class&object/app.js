@@ -204,40 +204,85 @@
 // Add a new method called editData to Admin that allows it to edit website data.
 
 
-let DATA="Secret information";
-//creating class 
-class User{
-    constructor(name, email){
-    this.name=name;
-    this.email=email;
-    }
+// let DATA="Secret information";
+// //creating class 
+// class User{
+//     constructor(name, email){
+//     this.name=name;
+//     this.email=email;
+//     }
 
-    // this is a method 
-    ViewData(){
-        console.log("data=",DATA);
-    }
-}
+//     // this is a method 
+//     ViewData(){
+//         console.log("data=",DATA);
+//     }
+// }
 
-class Admin extends User{
-    constructor(name,email){
-        super(name,email);
-    }
-    editData(){
-        DATA="some new value"
-    }
-}
+// class Admin extends User{
+//     constructor(name,email){
+//         super(name,email);
+//     }
+//     editData(){
+//         DATA="some new value"
+//     }
+// }
 
 // let student1=new User("Dipesh","dipesh@gmail.com");
 // console.log(student1);
 // let student2=new User("bb","bb@gmail.com");
 // console.log(student2);
 
-let admin =new Admin("admin","admin@gmail.com")
-console.log(admin);
-console.log(admin.ViewData)
+// let admin =new Admin("admin","admin@gmail.com")
+// console.log(admin);
+// console.log(admin.ViewData)
 
-console.log(admin.editData)// admin le data laie edit garna pau x 
+// console.log(admin.editData)// admin le data laie edit garna pau x 
 
+// ================================================================
+class Shape{
+    name;
+    sides;
+    sideLength;
+
+    constructor(name,sideLength,sides){
+        this.name=name;
+        this.sides=sides;
+        this.sideLength=sideLength;
+    }
+
+    calcperimeter(){
+        console.log(
+            `The ${this.name}'s perimeter length is ${this.sides*this.sideLength}.`,
+        );
+    }
+    
+}
+
+
+const square=new Shape("square",4,5);
+square.calcperimeter();
+
+const triangle=new Shape("triangle",3,3);
+triangle.calcperimeter();
+
+
+
+// ==========================================================================================
+
+class square1 extends Shape{
+    constructor(sideLength){
+    super("square",4,sideLength)
+    }
+    calcarea(){
+        console.log(
+            `The ${this.name}'s area is ${this.sideLength* this.sideLength}.`,
+        );
+    }
+
+}
+const area= new square1(4);
+area.calcperimeter();
+area.calcarea();
 
 
 
