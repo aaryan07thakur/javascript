@@ -396,48 +396,102 @@
 // Create some instances of the "BankAccount" class, deposit some money, and withdraw a portion 
 // of it.
 
-class BankAccount{
-    constructor(accountnumber,balance){
-        this.accountnumber=accountnumber;
-        this.balance=balance;
-        console.log(`A/C No.: ${accountnumber}`);
-        console.log(`Opening Balance: $${balance}`);
+// class BankAccount{
+//     constructor(accountnumber,balance){
+//         this.accountnumber=accountnumber;
+//         this.balance=balance;
+//         console.log(`A/C No.: ${accountnumber}`);
+//         console.log(`Opening Balance: $${balance}`);
 
-    }
-    //method
-    deposit(amount){
-        this.balance+=amount;
-        console.log(`Deposited amount: $${amount}`)
+//     }
+//     //method
+//     deposit(amount){
+//         this.balance+=amount;
+//         console.log(`Deposited amount: $${amount}`)
 
+//     }
+//     withdraw(amount){
+//         if (amount<= this.balance){
+//             this.balance-=amount;
+//             console.log(`Withdraw amount: $${amount}`)
+//         }
+//         else{
+//             console.log(`Want to withdrawn: $${amount}`);
+//             console.log(`Insufficient balance`);
+//         } 
+//     }
+//     displayBalance(){
+//         console.log(`Account Balance: $${this.balance}`);
+//     }
+
+// }
+
+
+// // create instance of the bankAccount class
+// const account=new BankAccount(`24257212322D`,9000000000)
+// account.deposit(1000);
+// account.withdraw(9000000000);
+// account.withdraw(1000);
+// account.displayBalance();
+
+
+// ============================================================================================
+//Write a JavaScript program that creates a class called 'Shape' 
+// with a method to calculate the area. Create two subclasses, 'Circle' and 'Triangle', 
+// that inherit from the 'Shape' class and override the area calculation method. Create an 
+// instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class.
+
+class Shape{
+    calculateArea(){
+        throw new Error("Method 'calculateArea()' must be overridden in subclasses");
     }
-    withdraw(amount){
-        if (amount<= this.balance){
-            this.balance-=amount;
-            console.log(`Withdraw amount: $${amount}`)
-        }
-        else{
-            console.log(`Want to withdrawn: $${amount}`);
-            console.log(`Insufficient balance`);
-        } 
+}
+
+class Circle extends Shape{
+    constructor(radius){
+        super();
+        this.radius=radius;
     }
-    displayBalance(){
-        console.log(`Account Balance: $${this.balance}`);
+    calculateArea(){
+        return Math.PI * this.radius * this.radius;
+    }
+
+}
+class Triangle extends Shape{
+    constructor(weidth, height){
+        super();
+        this.weidth=weidth;
+        this.height=height;
+    }
+    calculateArea(){
+        return 1/2*(this.weidth * this.height);
     }
 
 }
 
+class Rectangle extends Shape{
+    constructor(weidth, height){
+        super();
+        this.weidth=weidth;
+        this.height=height;
+    }
+    calculateArea(){
+        return this.weidth * this.height ;
+    }
 
-// create instance of the bankAccount class
-const account=new BankAccount(`24257212322D`,9000000000)
-account.deposit(1000);
-account.withdraw(9000000000);
-account.withdraw(1000);
-account.displayBalance();
+}
 
+const circle=new Circle(7);
+const circleArea=circle.calculateArea();
+console.log(`Circle Area: ${circleArea}`);
 
+const tri=new Triangle(8,9);
+const areatriangle=tri.calculateArea();
+console.log(`Area of Triangle is: ${areatriangle}`);
 
-
-
+const rectangle= new Rectangle (8,9);
+const arearectangle= rectangle.calculateArea();
+console.log(`Area of Rectangle is : ${arearectangle}`);
 
 
 
