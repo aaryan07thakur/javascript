@@ -114,35 +114,87 @@
 // ===============================================================================
 // chaning promises
 
-function asyncfun(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("some data1");
-            resolve("success");
-        },4000);
-    });
-}
+// function asyncfun(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("some data1");
+//             resolve("success");
+//         },4000);
+//     });
+// }
 
-function asyncfun2(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("data2");
-            resolve("success");
-        },6000);
-    });
-}
-// promise chaining
-console.log("fetching data1..............");
-let p1=asyncfun();
-p1.then((res)=>{
-    console.log("result:",res);
-    console.log("fetching data2......");
-    let p2=asyncfun2();
-    p2.then((res)=>{
-        console.log("result:",res);
+// function asyncfun2(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("data2");
+//             resolve("success");
+//         },6000);
+//     });
+// }
+// // promise chaining
+// console.log("fetching data1..............");
+// let p1=asyncfun();
+// p1.then((res)=>{
+//     console.log("result:",res);
+//     console.log("fetching data2......");
+//     let p2=asyncfun2();
+//     p2.then((res)=>{
+//         console.log("result:",res);
 
-    });
+//     });
+// });
+
+// ===================================================
+// Create three promises that resolve after different times
+const fastPromise=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('fast promise resolved');
+    },1000);
 });
+
+const mediumPromise=new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve('Medium promise resolved');
+    },2000);
+});
+
+const slowPromise=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Slow Promise resolved')
+    },3000);
+
+});
+
+//log when each individual promise resolves
+fastPromise.then ((message)=>{
+    console.log("fastPromise finished: ", message)
+    
+});
+
+mediumPromise.then ((message)=>{
+    console.log("Mediumpromise finished: ", message)
+
+    
+});
+
+slowPromise.then ((message)=>{
+    console.log("slow Promise finished: ", message)
+
+    
+});
+
+// use promise.race to return the resoled promise
+Promise.race([fastPromise, mediumPromise, slowPromise])
+.then((winnermessage)=>{
+    // console.log('\n promise.race winner:',winnermessage)
+    
+})
+.catch((error)=>{
+    console.error('Promise.race rejected:', error);
+});
+
+
+// ===============================================================
 
 
 
