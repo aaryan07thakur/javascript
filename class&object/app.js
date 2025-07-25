@@ -441,59 +441,75 @@
 // that inherit from the 'Shape' class and override the area calculation method. Create an 
 // instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class.
 
-class Shape{
-    calculateArea(){
-        throw new Error("Method 'calculateArea()' must be overridden in subclasses");
-    }
+// class Shape{
+//     calculateArea(){
+//         throw new Error("Method 'calculateArea()' must be overridden in subclasses");
+//     }
+// }
+
+// class Circle extends Shape{
+//     constructor(radius){
+//         super();
+//         this.radius=radius;
+//     }
+//     calculateArea(){
+//         return Math.PI * this.radius * this.radius;
+//     }
+
+// }
+// class Triangle extends Shape{
+//     constructor(weidth, height){
+//         super();
+//         this.weidth=weidth;
+//         this.height=height;
+//     }
+//     calculateArea(){
+//         return 1/2*(this.weidth * this.height);
+//     }
+
+// }
+
+// class Rectangle extends Shape{
+//     constructor(weidth, height){
+//         super();
+//         this.weidth=weidth;
+//         this.height=height;
+//     }
+//     calculateArea(){
+//         return this.weidth * this.height ;
+//     }
+
+// }
+
+// const circle=new Circle(7);
+// const circleArea=circle.calculateArea();
+// console.log(`Circle Area: ${circleArea}`);
+
+// const tri=new Triangle(8,9);
+// const areatriangle=tri.calculateArea();
+// console.log(`Area of Triangle is: ${areatriangle}`);
+
+// const rectangle= new Rectangle (8,9);
+// const arearectangle= rectangle.calculateArea();
+// console.log(`Area of Rectangle is : ${arearectangle}`);
+
+
+// ==========================================================================================
+//Error Handling
+
+let a=6;
+let b=10;
+console.log("a=",a);
+console.log("a=",a);
+console.log("a=",a);
+console.log("a-b=",a+b);
+try{
+    console.log("a-c=",a-c);
+}catch (err){
+    console.log(err);
 }
 
-class Circle extends Shape{
-    constructor(radius){
-        super();
-        this.radius=radius;
-    }
-    calculateArea(){
-        return Math.PI * this.radius * this.radius;
-    }
-
-}
-class Triangle extends Shape{
-    constructor(weidth, height){
-        super();
-        this.weidth=weidth;
-        this.height=height;
-    }
-    calculateArea(){
-        return 1/2*(this.weidth * this.height);
-    }
-
-}
-
-class Rectangle extends Shape{
-    constructor(weidth, height){
-        super();
-        this.weidth=weidth;
-        this.height=height;
-    }
-    calculateArea(){
-        return this.weidth * this.height ;
-    }
-
-}
-
-const circle=new Circle(7);
-const circleArea=circle.calculateArea();
-console.log(`Circle Area: ${circleArea}`);
-
-const tri=new Triangle(8,9);
-const areatriangle=tri.calculateArea();
-console.log(`Area of Triangle is: ${areatriangle}`);
-
-const rectangle= new Rectangle (8,9);
-const arearectangle= rectangle.calculateArea();
-console.log(`Area of Rectangle is : ${arearectangle}`);
-
-
+console.log("a*b=",a*b);
 
 
 
