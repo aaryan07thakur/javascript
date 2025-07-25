@@ -322,28 +322,118 @@
 
 
 
-class Rectangle{
-    constructor(width,height){
-        this.width=width;
-        this.height=height;
-    }
-    calcArea(){
-        console.log(
-            `The Area of Rectangle is: ${this.width*this.height}`
-        )
-    }
-    calcperimeter(){
-        console.log(
-            `The Perimeter of Rectangle is: ${2*(this.width*this.height)}`
-        )
-    }
-}
-// create an instance of the rectangle class
-const rectangle=new Rectangle(2,4);
+// class Rectangle{
+//     constructor(width,height){
+//         this.width=width;
+//         this.height=height;
+//     }
+//     calcArea(){
+//         console.log(
+//             `The Area of Rectangle is: ${this.width*this.height}`
+//         )
+//     }
+//     calcperimeter(){
+//         console.log(
+//             `The Perimeter of Rectangle is: ${2*(this.width*this.height)}`
+//         )
+//     }
+// }
+// // create an instance of the rectangle class
+// const rectangle=new Rectangle(2,4);
 
-//calculate area and perimeter of rectangle
-const area=rectangle.calcArea();
-const perimeter=rectangle.calcperimeter();
+// //calculate area and perimeter of rectangle
+// const area=rectangle.calcArea();
+// const perimeter=rectangle.calcperimeter();
+
+
+
+// ====================================================================================
+// Write a JavaScript program that creates a class called 'Vehicle' with properties for make, 
+// model, and year. Include a method to display vehicle details. Create a subclass called 'Car' 
+// that inherits from the 'Vehicle' class and includes an additional property for the number of
+//  doors. Override the display method to include the number of doors.
+
+
+// class Vehicle{
+//     constructor(make,model,years){
+//         this.make=make;
+//         this.model=model;
+//         this.years=years;
+
+//     }
+
+//     displayDetails(){
+//         console.log(`Make:  ${this.make}`);
+//         console.log(`model:  ${this.model}`);
+//         console.log(`years: ${this.years}`);
+//     }
+// }
+// class Car extends Vehicle{
+//     constructor(make,model, years, doors){
+// //super keyword vechicles class ko properties inheritates garna ko lagie super keyword use hun x 
+//         super(make,model,years); 
+//         this.doors=doors; // car class ko properties ho 
+//     }
+//     displayDetails(){
+//         super.displayDetails();
+//         console.log(`Doors: ${this.doors}`);
+//     }
+// }
+// //creating instance or object of the Vechiles class
+// const vehicle=new Vehicle('Ford','f-20',2025);
+// console.log("Vechiles Details: ");
+// vehicle.displayDetails();
+
+// // create an instance of the car class
+// const car=new Car("Honda", "Accord", 2025,4);
+// console.log("\nCar Details: ");
+// car.displayDetails();
+
+// =======================================================================================
+
+// Write a JavaScript program that creates a class called "BankAccount" with properties for 
+// account number and balance. Include methods to deposit and withdraw money from the account. 
+// Create some instances of the "BankAccount" class, deposit some money, and withdraw a portion 
+// of it.
+
+class BankAccount{
+    constructor(accountnumber,balance){
+        this.accountnumber=accountnumber;
+        this.balance=balance;
+        console.log(`A/C No.: ${accountnumber}`);
+        console.log(`Opening Balance: $${balance}`);
+
+    }
+    //method
+    deposit(amount){
+        this.balance+=amount;
+        console.log(`Deposited amount: $${amount}`)
+
+    }
+    withdraw(amount){
+        if (amount<= this.balance){
+            this.balance-=amount;
+            console.log(`Withdraw amount: $${amount}`)
+        }
+        else{
+            console.log(`Want to withdrawn: $${amount}`);
+            console.log(`Insufficient balance`);
+        } 
+    }
+    displayBalance(){
+        console.log(`Account Balance: $${this.balance}`);
+    }
+
+}
+
+
+// create instance of the bankAccount class
+const account=new BankAccount(`24257212322D`,9000000000)
+account.deposit(1000);
+account.withdraw(9000000000);
+account.withdraw(1000);
+account.displayBalance();
+
 
 
 
