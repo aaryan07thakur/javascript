@@ -146,61 +146,107 @@
 
 // ===================================================
 // Create three promises that resolve after different times
-const fastPromise=new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve('fast promise resolved');
-    },1000);
-});
+// const fastPromise=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve('fast promise resolved');
+//     },1000);
+// });
 
-const mediumPromise=new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-        resolve('Medium promise resolved');
-    },2000);
-});
+// const mediumPromise=new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve('Medium promise resolved');
+//     },2000);
+// });
 
-const slowPromise=new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve('Slow Promise resolved')
-    },3000);
+// const slowPromise=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve('Slow Promise resolved')
+//     },3000);
 
-});
+// });
 
-//log when each individual promise resolves
-fastPromise.then ((message)=>{
-    console.log("fastPromise finished: ", message)
+// //log when each individual promise resolves
+// fastPromise.then ((message)=>{
+//     console.log("fastPromise finished: ", message)
     
-});
+// });
 
-mediumPromise.then ((message)=>{
-    console.log("Mediumpromise finished: ", message)
-
-    
-});
-
-slowPromise.then ((message)=>{
-    console.log("slow Promise finished: ", message)
+// mediumPromise.then ((message)=>{
+//     console.log("Mediumpromise finished: ", message)
 
     
-});
+// });
 
-// use promise.race to return the resoled promise
-Promise.race([fastPromise, mediumPromise, slowPromise])
-.then((winnermessage)=>{
-    // console.log('\n promise.race winner:',winnermessage)
+// slowPromise.then ((message)=>{
+//     console.log("slow Promise finished: ", message)
+
     
-})
-.catch((error)=>{
-    console.error('Promise.race rejected:', error);
-});
+// });
+
+// // use promise.race to return the resoled promise
+// Promise.race([fastPromise, mediumPromise, slowPromise])
+// .then((winnermessage)=>{
+//     // console.log('\n promise.race winner:',winnermessage)
+    
+// })
+// .catch((error)=>{
+//     console.error('Promise.race rejected:', error);
+// });
 
 
 // ===============================================================
+//Async-Await:
+//async
+// async function hello() {
+//     console.log("Hello");
+    
+// }
+
+
+
+//Await: to wait
+
+// function API(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             console.log("weather data");
+//             resolve(200);
+//         },2000);
+//     });
+// }
+
+
+// async function getweatherData() {
+//     await API();// first ma yo kam hun x 
+//     await API();// second ma use hun x 
+    
+// }
+
+
+
+// ==========================================================================================
+//IIFE
+// (function(){
+//     console.log("IIFE runs immediately ");
+// })();
+
+
+
+// let name= "Dipesh";
+// (function(){
+//     let name="Inside IIFE";
+//     console.log("Name inside IIFE: ", name);  // inside IIFE
+// })();
+// console.log("Name outside IIFE:", name);
 
 
 
 
+// with parameters
 
-
+// (function(a,b){
+//     console.log("Sum is :",a+b);
+// })(5,5);
 
 
 
