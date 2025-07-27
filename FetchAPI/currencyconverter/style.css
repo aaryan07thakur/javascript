@@ -2,6 +2,17 @@
     margin: 0;
     padding: 0;
 }
+.head{
+    text-align: center;
+}
+
+.msg{
+    border: 2rem;
+    background-color: #f3d9ed;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+
+}
 
 body{
     display: flex;
