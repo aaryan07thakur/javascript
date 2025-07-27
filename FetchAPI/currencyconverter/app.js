@@ -8,6 +8,12 @@ const fromCurr=document.querySelector(".from select");
 const toCurr=document.querySelector(".to select");
 const msg=document.querySelector(".msg");
 
+// page upload vaya pachhi default convert aau x 1 usd into npr ko value
+window.addEventListener("load",()=>{
+    updateExchangeRate();
+
+});
+
 
 for (let select of dropdowns){
     for (currCode in countryList) {
@@ -35,8 +41,16 @@ const updateFlag =(element) => {
     img.src=newSrc;  
 };
 
-btn.addEventListener("click", async (evt)=>{
+
+
+
+btn.addEventListener("click", (evt)=>{
     evt.preventDefault();// page refresh huna banda hunx  button click vayo vnae 
+    updateExchangeRate();
+});
+
+
+const updateExchangeRate= async ()=>{
     let amount=document.querySelector(".amount input");
     let amtVal=amount.value;
     if(amtVal==="" || amtVal<1){
@@ -50,9 +64,6 @@ btn.addEventListener("click", async (evt)=>{
     let finalAmount=amtVal*rate;
     msg.innerText=`${amtVal} ${fromCurr.value}=${finalAmount} ${toCurr.value}`
 
-
-
-});
-
+}
 
 
